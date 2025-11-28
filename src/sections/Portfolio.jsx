@@ -6,57 +6,38 @@ import project3 from "../assets/Project3.webp"
 
 export default function Portfolio() {
   return (
-    <section id="work" className="relative py-32 bg-white px-6 overflow-hidden">
-      <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
-      </div>
-
+    <section id="work" className="relative py-32 lg:pl-64 bg-gray-50 px-6 overflow-hidden">
       <div className="relative max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-20"
-        >
-          <motion.p
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="inline-block px-4 py-2 bg-primary/10 border border-primary/25 rounded-full text-primary font-semibold text-sm uppercase tracking-widest mb-4"
-          >
-            Selected Projects
-          </motion.p>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-dark-bg mb-4 leading-tight">
-            Our{" "}
-            <span className="bg-linear-to-r from-primary to-accent bg-clip-text text-transparent">
-              Best Work
-            </span>
+        <div className="text-center mb-20">
+          <p className="inline-block px-4 py-2 bg-black/5 border border-black/10 rounded-full text-black/70 font-medium text-sm uppercase tracking-wider mb-4">
+            Ventures & Projects
+          </p>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-4 leading-tight">
+            Built to{" "}
+            <span className="italic">Last</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Showcasing excellence through innovative design and cutting-edge development.
+            Impactful ventures and initiatives that have created value across industries.
           </p>
-        </motion.div>
+        </div>
 
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 lg:gap-10">
           <PortfolioCard
             image={project1}
-            title="Corporate Website Transformation"
-            category="Web Development"
+            title="TechVentures Capital"
+            category="Investment Fund"
             index={0}
           />
           <PortfolioCard
             image={project2}
-            title="E-Commerce UX Overhaul"
-            category="UI/UX Design"
+            title="Scale Academy"
+            category="Education Platform"
             index={1}
           />
           <PortfolioCard
             image={project3}
-            title="Fintech Mobile App Strategy"
-            category="Product Design"
+            title="InnovateCo"
+            category="SaaS Startup"
             index={2}
           />
         </div>
